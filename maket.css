@@ -1,0 +1,146 @@
+*
+{
+  margin: 0;
+  font: arial;
+}
+body{
+display: grid;
+grid-gap: 20px;
+grid-template: 1fr 200px 200px 200px 200px / repeat(3, 1fr) ;
+margin: 15px 100px 20px 100px;
+}
+header{
+background: #228B22;
+grid-area: 1 / 1 / 2 / 4;
+}
+#start{
+text-align: left;
+padding: 30px 0 0 0;
+grid-area: 2 / 1 / 3 / 4;
+}
+#sticky{
+  background: #DAA520;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  border: 1px solid green;
+}
+#start > div{
+  padding: 15px;
+  border: 1px solid #000;
+  display: inline-block;
+}
+nav{
+  text-align: center;
+  float: right;
+  height: 100%;
+  padding: 15px 0;
+}
+#Country{
+background: #DC143C;
+grid-area: 3 / 1 / 4 / 2;
+}
+#People{
+background: #DB7093;
+grid-area: 3 / 2 / 4 / 4;
+}
+#Travel{
+  display: block;
+background: #DA70D6;
+grid-area: 4 / 1 / 5 / 2;
+}
+#Technology{
+background: #8B008B;
+grid-area: 4 / 2 / 5 / 3;
+}
+#Economy{
+background: #9370DB;
+grid-area: 4 / 3 / 5 / 4;
+}
+#Travel:hover{
+  transform: rotate(-33deg);
+  background-color: #000;
+  animation: sdvig1 1.5s infinite;
+  animation-direction: alternate;
+}
+#Economy:hover{
+  transform: rotate(-33deg);
+  background-color: #000;
+  animation: sdvig2 1.5s infinite;
+  animation-direction: alternate;
+}
+#Technology:hover{
+  transform: rotate(-33deg);
+  background-color: #000;
+  animation: sdvig3 1.5s infinite;
+  animation-direction: alternate;
+}
+#Country:hover{
+  transform: rotate(-33deg);
+  background-color: #000;
+  animation: sdvig4 1.5s infinite;
+  animation-direction: alternate;
+}
+#People:hover{
+  animation: zoom 1.5s alternate both;
+}
+#NewestPost:hover{
+  animation: zoom 1.5s alternate both;
+}
+section{
+background: #228B22;
+grid-area: 5 / 2 / 6 / 4;
+}
+aside{
+  background: yellow;
+grid-area: 5 / 1 / 6 / 2;
+}
+footer > p{
+float: left;
+}
+footer > ul{
+  float: right;
+  height: 100%;
+  padding: 15px 0;
+}
+ul li {
+  display: inline;
+}
+a{
+  text-decoration: none;
+}
+@keyframes zoom {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: perspective(1000px) translate3d(0, 0, 200px);
+}}
+@keyframes sdvig1 {
+0% {
+  transform: translate(0, 0);
+}
+100% {
+  transform: translate(20px, -50px);
+}}
+@keyframes sdvig2 {
+0% {
+  transform: translate(0, 0);
+}
+100% {
+  transform: translate(-20px, -50px);
+}}
+@keyframes sdvig3 {
+0% {
+  transform: translate(0, 0);
+}
+100% {
+  transform: translate(0px, -50px);
+}}
+@keyframes sdvig4 {
+0% {
+  transform: translate(0, 0);
+}
+100% {
+  transform: translate(20px, 50px);
+}}
